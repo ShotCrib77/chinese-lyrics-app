@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS songs(
     lyrics_pn TEXT NOT NULL,
     lyrics_en TEXT NOT NULL,
     times_accessed INTEGER DEFAULT 0,
-    last_accessed DATE DEFAULT NOW(),
+    last_accessed TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     favorite BOOLEAN DEFAULT FALSE,
     UNIQUE (song_name, artist)
 );
