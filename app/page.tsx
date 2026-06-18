@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import AddSong from "./components/AddSong";
 import SongQuickAccessContainer from "./components/SongQuickAccessContainer";
 import { getFavorites, getMostAccessed, getRecentlyAccessed } from "./lib/db";

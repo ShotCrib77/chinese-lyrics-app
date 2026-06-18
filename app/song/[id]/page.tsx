@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import LyricsOverview from "@/app/components/LyricsOverview";
 import { getSongById } from "@/app/lib/db";
 import { notFound } from "next/navigation";
