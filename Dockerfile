@@ -14,4 +14,4 @@ EXPOSE 4004
 
 ENV NODE_ENV=production
 
-CMD ["node", "dist/server/server.js"]
+CMD ["npm", "start"]
