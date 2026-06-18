@@ -58,7 +58,7 @@ export default function LyricsOverview({ songObject }: { songObject: SongObject 
     }
   }
   return (
-    <main className="relative flex flex-1 w-full max-w-4xl flex-col items-center justify-center py-16 px-16 bg-white dark:bg-black">
+    <main className="relative flex flex-1 w-full max-w-4xl flex-col items-center justify-center py-16 px-16 bg-white">
       <div className="absolute top-8 left-8">
         <Link className={"text-2xl font-bold"} href={"/"}>←</Link>
       </div>
