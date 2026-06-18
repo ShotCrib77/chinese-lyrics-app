@@ -46,7 +46,7 @@ export default function AddSongModal({isOpen, setIsOpen}: {isOpen: boolean, setI
 						<input onChange={(e) => setSongName(e.target.value)} value={songName} type="text" id="songName" name="songName" placeholder="Song Name..." className="outline-0 border-black border p-1 rounded-sm w-full"/>
 						<input onChange={(e) => setArtist(e.target.value)} value={artist} type="text" id="artist" name="artist" placeholder="Artist..." className="outline-0 border-black border p-1 rounded-sm w-full"/>
 					</div>
-					<input onChange={(e) => setPassword(e.target.value)} value={password} type="text" id="password" name="password" placeholder="Password..." className="outline-0 border-black border p-1 rounded-sm w-full"/>
+					<input onChange={(e) => setPassword(e.target.value)} value={password} type="password" id="password" name="password" placeholder="Password..." className="outline-0 border-black border p-1 rounded-sm w-full"/>
 					<textarea onChange={(e) => setLyrics(e.target.value)} value={lyrics} id="lyrics" name="lyrics" placeholder="Lyrics" className="outline-0 border-black border p-1 rounded-sm h-64"/>
 				</div>
 				<button onClick={submitSong} className={`mt-4 p-2 rounded-3xl mx-auto flex self-center ${canSubmit ? "bg-black text-white cursor-pointer" : "bg-gray-200 border-gray-500 border text-gray-500 cursor-not-allowed"}`}>Submit</button>

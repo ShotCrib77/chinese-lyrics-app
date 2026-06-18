@@ -64,7 +64,7 @@ export default function LyricsOverview({ songObject }: { songObject: SongObject 
       </div>
       <div className="flex flex-col absolute top-8 transform-x-1/2 text-red-400">
         <button onClick={() => setDisplayPasswordEntry(prev => !prev)} className={"text-2xl font-bold"}>✖</button>
-        <input onKeyDown={(e) => handlePasswordKeyDown(e)} onChange={(e) => setPassword(e.target.value)} value={password} type="text" placeholder="password..." className={`${!displayPasswordEntry && "hidden"} text-gray-600 border p-1 text-sm outline-0`}/>
+        <input onKeyDown={(e) => handlePasswordKeyDown(e)} onChange={(e) => setPassword(e.target.value)} value={password} type="password" placeholder="password..." className={`${!displayPasswordEntry && "hidden"} text-gray-600 border p-1 text-sm outline-0`}/>
       </div>
       <div className="absolute top-8 right-8">
         <button
