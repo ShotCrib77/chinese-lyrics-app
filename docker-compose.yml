@@ -1,7 +1,7 @@
 services:
   postgres:
     image: postgres:16
-    container_name: zh_lyrics_app
+    container_name: zh_lyrics_db
     restart: always
     env_file:
       - .env
@@ -10,6 +10,25 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
       - ./schema.sql:/docker-entrypoint-initdb.d/schema.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  app:
+    build: .
+    container_name: zh_lyrics_app
+    restart: always
+    env_file:
+      - .env
+    environment:
+      - DATABASE_URL=postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "4004:4004"
 
 volumes:
   pgdata:
