@@ -39,7 +39,7 @@ export default function AddSongModal({isOpen, setIsOpen}: {isOpen: boolean, setI
   return (
 		<div className={`${!isOpen && "hidden"}`}>
 			<div className="fixed inset-0 z-40" onClick={() => setIsOpen(false)}/>
-			<div className="absolute z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gray-200 px-6 py-12 rounded-md shadow-2xl w-5/6 lg:w-3/5 h-auto">
+			<div className="absolute z-150 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gray-200 px-6 py-12 rounded-md shadow-2xl w-5/6 lg:w-3/5 h-auto">
 				<button onClick={() => setIsOpen(false)} className="absolute right-4 top-2 cursor-pointer">✖</button>
 				<div className="flex flex-col gap-4">
 					<div className="flex gap-3">
